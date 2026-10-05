@@ -41,7 +41,7 @@ def row_sums(mat: list[list[float | int]]) -> list[float]:
 #     print(f"[[1, 2], [3]] -> {row_sums([[1, 2], [3]])}")
 
 def col_sums(mat: list[list[float | int]]) -> list[float]:
-    """возвращает сумму по каждому столбцу.
+    """Возвращает сумму по каждому столбцу.
     
     col_sums([[1, 2, 3], [4, 5, 6]] → [5, 7, 9]
     """
@@ -53,8 +53,8 @@ def col_sums(mat: list[list[float | int]]) -> list[float]:
         s.append(sum([mat[j][i] for j in range(len(mat))]))
     return s
 
-if __name__ == "__main__":
-    print(f"""[[1, 2, 3], [4, 5, 6]] -> {col_sums([[1, 2, 3], [4, 5, 6]])}
-[[-1, 1], [10, -10]] -> {col_sums([[-1, 1], [10, -10]])}
-[[0, 0], [0, 0]] -> {col_sums([[0, 0], [0, 0]])}""")
-    print(f"[[1, 2], [3]] -> {col_sums([[1, 2], [3]])}")
+# if __name__ == "__main__":
+#     print(f"""[[1, 2, 3], [4, 5, 6]] -> {col_sums([[1, 2, 3], [4, 5, 6]])}
+# [[-1, 1], [10, -10]] -> {col_sums([[-1, 1], [10, -10]])}
+# [[0, 0], [0, 0]] -> {col_sums([[0, 0], [0, 0]])}""")
+#     print(f"[[1, 2], [3]] -> {col_sums([[1, 2], [3]])}")
