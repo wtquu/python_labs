@@ -56,3 +56,64 @@ def flatten(mat: list[list | tuple]) -> list:
     return l
 ```
 ![че-то случилося приключилося](https://github.com/wtquu/python_labs/blob/main/images/lab02/exA3.png)
+
+
+
+## Задание B — matrix.py
+
+### transpose
+Меняет строки и столбцы местами. Если матрица "рваная", выдает ошибку ValueError.
+```py
+def transpose(mat: list[list[float | int]]) -> list[list]:
+    """Меняет строки и столбцы местами.
+
+    transpose([[1, 2], [3, 4]]) -> [[1, 3], [2, 4]]
+    """
+    if len(mat) == 0:
+        return []
+    len_m = len(mat[0])
+    m = [[] for _ in range(len_m)]
+    for i in range(len(mat)):
+        if len(mat[i]) != len_m:
+            raise ValueError("Рваная матрица")
+        for j in range(len_m):
+            m[j].append(mat[i][j])
+    return m
+```
+![че-то случилося приключилося](https://github.com/wtquu/python_labs/blob/main/images/lab02/exB1.png)
+
+### row_sums
+Возвращает сумму по каждой строке. Если матрица "рваная", выдает ошибку ValueError.
+```py
+def row_sums(mat: list[list[float | int]]) -> list[float]:
+    """Возвращает сумму по каждой строке. 
+    
+    row_sums([[1, 2, 3], [4, 5, 6]]) → [6, 15]
+    """
+    s = []
+    len_m = len(mat[0])
+    for i in mat:
+        if len(i) != len_m:
+            raise ValueError("Рваная матрица")
+        s.append(sum(i))
+    return s
+```
+![че-то случилося приключилося](https://github.com/wtquu/python_labs/blob/main/images/lab02/exB2.png)
+
+### col_sums
+Возвращает сумму по каждому столбцу. Если матрица "рваная", выдает ошибку ValueError.
+```py
+def col_sums(mat: list[list[float | int]]) -> list[float]:
+    """Возвращает сумму по каждому столбцу.
+    
+    col_sums([[1, 2, 3], [4, 5, 6]] → [5, 7, 9]
+    """
+    len_m = [len(i) for i in mat]
+    if min(len_m) != max(len_m):
+        raise ValueError("Рваная матрица")
+    s = []
+    for i in range(len(mat[0])):
+        s.append(sum([mat[j][i] for j in range(len(mat))]))
+    return s
+```
+![че-то случилося приключилося](https://github.com/wtquu/python_labs/blob/main/images/lab02/exB3.png)
