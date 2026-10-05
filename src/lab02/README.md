@@ -17,4 +17,4 @@ def min_max(nums:list[float | int]) -> tuple[float | int, float | int]:
             max_n = i
     return min_n, max_n
 ```
-![че-то случилося приключилося](.../images/lab02/exA1.png)
+![че-то случилося приключилося](https://github.com/wtquu/python_labs/blob/main/images/lab02/exA1.png)
