@@ -27,9 +27,18 @@ def unique_sorted(nums: list[float | int]) -> list[float | int]:
     return l
 
 
-# def flatten(mat: list[list | tuple]) -> list:
-#     """
-#     """
+def flatten(mat: list[list | tuple]) -> list:
+    """«Расплющивает» список списков/кортежей в один список по строкам (row-major).
+
+    flatten([[0, 1, 2], (3, 4)]) -> [0, 1, 2, 3, 4]
+    """
+    l = list()
+    for i in mat:
+        if not isinstance(i, (list, tuple)):
+            raise TypeError("строка не строка строк матрицы")
+        for j in i:
+            l.append(j)
+    return l
 
 
 # if __name__ == "__main__":
@@ -39,3 +48,14 @@ def unique_sorted(nums: list[float | int]) -> list[float | int]:
 # [1.5, 2, 2.0, -3.1] -> {min_max([1.5, 2, 2.0, -3.1])}""")
 #     print(f"[] -> {min_max([])}")
 
+# if __name__ == "__main__":
+#     print(f"""[3, 1, 2, 1, 3] -> {unique_sorted([3, 1, 2, 1, 3])}
+# [] -> {unique_sorted([])}
+# [-1, -1, 0, 2, 2] -> {unique_sorted([-1, -1, 0, 2, 2])}
+# [1.0, 1, 2.5, 2.5, 0] -> {unique_sorted([1.0, 1, 2.5, 2.5, 0])}""")
+
+# if __name__ == "__main__":
+#     print(f"""[[1, 2], [3, 4]] -> {flatten([[1, 2], [3, 4]])}
+# [[1, 2], (3, 4, 5)] -> {flatten([[1, 2], (3, 4, 5)])}
+# [[1], [], [2, 3]] -> {flatten([[1], [], [2, 3]])}""")
+#     print(f'[[1, 2], "ab"] -> {flatten([[1, 2], "ab"])}')
