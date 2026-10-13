@@ -60,6 +60,6 @@ def top_n(freq: dict[str, int], n: int = 5) -> list[tuple[str, int]]:
     r = sorted(freq.items(), key=lambda kv: (-kv[1], kv[0]))[:n]
     return r
 
-if __name__ == "__main__":
-    print('top_n({"a":3,"b":2,"c":1}, 2) -> '+f'{top_n({"a":3,"b":2,"c":1}, 2)}')
-    print('top_n({"aa":2,"bb":2,"cc":1}, 2) -> '+f'{top_n({"aa":2,"bb":2,"cc":1}, 2)}')
+# if __name__ == "__main__":
+#     print('top_n({"a":3,"b":2,"c":1}, 2) -> '+f'{top_n({"a":3,"b":2,"c":1}, 2)}')
+#     print('top_n({"aa":2,"bb":2,"cc":1}, 2) -> '+f'{top_n({"aa":2,"bb":2,"cc":1}, 2)}')
