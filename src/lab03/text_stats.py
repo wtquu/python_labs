@@ -7,8 +7,8 @@ t=tokenize(n)
 words=count_freq(t)
 top=top_n(words)
 
-print(f'''Всего слов: {len(t)}
-Уникальных слов: {len(words)}
-Топ-5:''')
+print(f"Всего слов: {len(t)}")
+print(f"Уникальных слов: {len(words)}")
+print(f"Топ-5:")
 for x in top:
-    print(f"{top[x][0]}:{top[x][1]}")
+    print(f"{x[0]}:{x[1]}")
