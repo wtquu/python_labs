@@ -49,6 +49,7 @@ def json_to_csv(json_path: str, csv_path: str) -> None:
 2. Считывает данные с помощью json.load() и проверяет,что объект является непустым списком словарей.
 3. Формирует список столбцов из всех ключей в порядке их первого появления.
 4. Записывает заголовок и строки в CSV.
+
 ![че-то случилося приключилося](https://github.com/wtquu/python_labs/blob/main/images/lab05/exA1.png)
 
 ### csv_to_json
@@ -85,6 +86,7 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
 2. С помощью csv.DictResder(f) первая строка становится ключами(заголовками), остальные строки - словарями.
 3. Проверяет наличие содержимого в файле.
 4. Полученный список словарей сохраняется с помощью json.dump() с отступом в два пробела.
+
 ![че-то случилося приключилося](https://github.com/wtquu/python_labs/blob/main/images/lab05/exA2.png)
 
 ## Задание B — CSV → XLSX
@@ -139,4 +141,5 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
 3. Создает книгу Excel с помощью openpyxl и добавляет строки CSV в лист Sheet1 с помощью ws.append().
 4. Ищет самый длинный текст в колонке и устанавливет ширину столбцов по максимальной длине содержимого.
 5. Сохраняет результат по указанному пути.
+
 ![че-то случилося приключилося](https://github.com/wtquu/python_labs/blob/main/images/lab05/exB.png)
